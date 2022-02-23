@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-Violet: hsl(256, 26%, 20%);
+    --Grayish-Blue: hsl(216, 30%, 68%);
+    --Very-Dark-Violet: hsl(270, 9%, 17%);
+    --Dark-Grayish-Violet: hsl(273, 4%, 51%); 
+    --Very-Light-Gray: hsl(0, 0%, 98%)
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+    font-size: 18px;
+}
+
+.desk .desktop{
+    display: none;
+}
+
+.pat {
+    display: none;
+}
+
+
+header {
+    display: flex;
+    height: 12vh;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Barlow Condensed', sans-serif;
+    position: absolute;
+}
+
+.head {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    width: 100vw;
+    height: 12vh;
+}
+
+.links {
+    display: none;
+    list-style: none;
+    background-color: hsl(256, 26%, 20%);
+    z-index: 10;
+    width: 100vw;
+    height: 300px;
+    padding-top: 5vh;
+    padding-left: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    transition: 0.4ms;
+    
+}
+
+.links li {
+    padding: 10px;
+}
+.links li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 55%);
+    font-size: 18px;
+}
+
+.show-links {
+    display: block;
+}
+
+.intro {
+    height: 100vh;
+    background-image: url(../images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro .text{
+    border: 1px solid #fff;
+    padding: 6vh 5vw;
+    width: 84vw;
+    text-align: left;
+}
+
+.intro .text h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+
+.vr {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.vr .img {
+    width: 90vw;
+    margin-left:5vw;
+    margin-bottom: 30px;
+}
+
+.vr .img img{
+    width: 100%;
+}
+.vr .text {
+    text-align: center;
+    width: 80vw;
+    margin-left: 10vw;
+    line-height: 1.5;
+}
+
+.vr .text h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+
+.grid .titel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    
+}
+
+.btn {
+    display: none;
+}
+
+.mob-btn {
+
+}
+
+.img-grid-mob {
+    display: grid;
+    grid-template-columns: 84vw;
+    margin-left: 8vw;
+    grid-gap: 20px;
+}
+
+.img-grid-mob figure{
+    position: relative;
+}
+
+.img-grid-mob img{
+    width: 100%;
+}
+
+.img-grid-mob figcaption{
+    position: absolute;
+    color: white;
+    top: 6vh;
+    left: 6vw;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.see-all {
+  width: 150px;
+  height: 50px;
+  border: 1px solid #999;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.see-all a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+/* start footer   */
+
+footer {
+    background-color: var(--Very-Dark-Violet);
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.logo-link {
+    margin-bottom: 50px;
+}
+
+
+.logo-link ul {
+    margin-top: 25px;
+    list-style: none;
+}
+
+.logo-link ul li{
+    margin-top:20px;
+    color: var(--Very-Light-Gray);
+}
+
+footer p {
+    margin-top: 50px;
+    color: var(--Dark-Grayish-Violet);
+}
+
+
+.sosial-icon img {
+    margin-left: 15px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+.desk, .desktop{
+    display: none;
+}
+
+/* desktop  */
+
+@media (min-width:800px) {
+    header {
+        width: 100%;
+    }
+    .head .togle {
+       display: none;
+    }
+    .head {
+        width: 30%;
+    }
+    .links {
+        display: flex;
+        width: 60%;
+        padding: 0;
+        color: white;
+        justify-content: end;
+        height: 100%;
+        align-items: center;
+        background-color: transparent;
+        z-index: 1;
+        background-image: none;
+    }
+
+    .links li {
+        margin-left: 20px;
+        font-size: 14px;
+    }
+
+    .links li a{
+        color: hsl(0, 0%, 100%);
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    .intro {
+        height: 80vh;
+        background-image: url(../images/desktop/image-hero.jpg);
+        width: 100%;
+        justify-content: start;
+    }
+    
+    .intro .text{
+        margin-left: 8vw;
+        width: 45vw;
+    }
+    
+    .intro .text h1 {
+        font-size: 56px;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    .vr {
+        display: flex;
+    }
+    
+    .vr .img {
+        width: 50vw;
+        margin-left:8vw;
+    }
+    
+    .vr .img img{
+        width: 100%;
+    }
+    .vr .text {
+        width: 40vw;
+        line-height: 1.5;
+        margin-left: -10vw;
+        margin-top: 35vh;
+        background-color: white;
+        height: 35vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 6vw;
+        text-align: left;
+    }
+    
+    .vr .text h2{
+        margin-bottom: 20px;
+        font-size: 30px
+    }
+    .vr .text p{
+        font-size: 14px;
+    }
+
+
+.desktop{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+   
+    grid-gap: 10px;
+} 
+
+.img-grid-des figure{
+    position: relative;
+}
+
+.img-grid-des img{
+    width: 100%;
+}
+
+.img-grid-des figcaption{
+    position: absolute;
+    color: white;
+    bottom:  6vh;
+    left: 2vw;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+
+
+    /* start footer   */
+
+footer {
+    display: flex;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    margin-bottom: 0;
+    text-align: left;
+}
+.logo-link img {
+    
+}
+
+
+.logo-link ul {
+    margin-top: 30;
+    display: flex;
+}
+
+.logo-link ul li{
+    margin-right:20px;
+
+}
+
+.sosial-text {
+    text-align: right;
+}
+
+.mobile {
+    display: none;
+}
+
+
+}
+
+@media (min-width:1400px) {
+    .desktop{
+        width: 1300px;
+        align-items: center;
+        grid-gap: 40px;
+        margin: 0 auto;
+    } 
+}
